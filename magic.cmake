@@ -9,7 +9,7 @@ function(magic_add_executable TARGET)
 
     # Get the sources that were added to the target
     get_target_property(TARGET_SOURCES "${TARGET}" SOURCES)
-    
+
     # Filter out the module interface units
     list(FILTER TARGET_SOURCES INCLUDE REGEX "(.ixx|.cppm)$")
     message("Interface units: ${TARGET_SOURCES}")
